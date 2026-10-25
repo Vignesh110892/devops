@@ -23,6 +23,7 @@ jobs:
 
   docker:
     runs-on: wsl-linux
+    needs: sonarqube
 
     steps:
       - name: Clone code
