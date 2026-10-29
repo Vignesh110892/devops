@@ -32,10 +32,9 @@ jobs:
         with:
           node-version: 24
       - name: Install dependencies
-       run: npm install
-
+        run: npm install
       - name: Create .env file
-       run: |
+        run: |
           if [[ "${{ github.event.inputs.environment }}" == "development" ]]; then
             echo "PORT=8080" >> .env.development
             echo "APP=GHA-NODE-DEV-APP" >> .env.development
