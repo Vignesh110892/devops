@@ -1,0 +1,10 @@
+name: Basic job
+
+on: 
+  workflow_dispatch: 
+jobs:
+  Basic:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: list files
+        run: ls -la
