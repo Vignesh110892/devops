@@ -2,13 +2,14 @@ name: Node input pipeline
 on: 
   push:
     branches: ["main"]
+  workflow_dispatch: 
     inputs:
       environment:
         description: "Choose the env to run"
         required: true
         default: "development"
         type: choice
-        option:
+        options:
           - development
           - production
       port:
