@@ -25,7 +25,7 @@ jobs:
             echo "APP=GHA-NODE-PROD-APP" >> .env.production
       - name: Run the application
         run: |
-            node app.js &
+            node app.js production &
             sleep 5
             curl http://localhost:8080
             curl http://localhost:8080/health
