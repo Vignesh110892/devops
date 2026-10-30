@@ -2,8 +2,6 @@ name: Basic job
 
 on: 
   workflow_dispatch:
-  push:
-    branches: [main]
 jobs:
   Basic:
     runs-on: self-hosted
