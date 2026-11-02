@@ -18,6 +18,6 @@ jobs:
       - name: Tag and push image
         run: |
           SHORT_SHA=${GITHUB_SHA::7}
-          docker tag dockerfile-distroless ${{ vars.DOCKERHUB_USERNAME }}/vignesh.m:$SHORT_SHA
+          docker tag dockerfile-distroless:latest ${{ vars.DOCKERHUB_USERNAME }}/vignesh.m:$SHORT_SHA
           docker push ${{ vars.DOCKERHUB_USERNAME }}/vignesh.m:$SHORT_SHA
           
