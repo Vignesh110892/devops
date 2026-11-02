@@ -19,5 +19,5 @@ jobs:
         run: |
           SHORT_SHA=${GITHUB_SHA::7}
           docker tag dockerfile-distroless ${{ vars.DOCKERHUB_USERNAME }}/nodeapp8:$SHORT_SHA
-          docker push ${{ vars.DOCKERHUB_USERNAME }}/nodeapp8:$SHORT_SHA
+          docker push ${{ vars.DOCKERHUB_USERNAME }}/vignesh.m:$SHORT_SHA
           
