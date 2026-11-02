@@ -14,7 +14,9 @@ jobs:
           username: ${{vars.DOCKERHUB_USERNAME}}
           password: ${{secrets.DOCKERHUB_TOKEN}}
       - name: Build Docker image
-        run: docker build -f Dockerfile.distroless -t dockerfile-distroless .
+        run: |
+          sudo usermod -aG docker vigneshm
+          docker build -f Dockerfile.distroless -t dockerfile-distroless .
       - name: Tag and push image
         run: |
           SHORT_SHA=${GITHUB_SHA::7}
