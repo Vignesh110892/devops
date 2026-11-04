@@ -1,18 +1,16 @@
-name: Basic job
+name: Greeting with basic linux commands
 
-on: 
-  workflow_dispatch:
+on: workflow_dispatch
+
 jobs:
-  Basic:
+  Basics:
     runs-on: self-hosted
     steps:
-      - name: list files
+      - name: Print Helloworld
+        run: echo "HelloWorld"
+      - name: check runner details
         run: |
+          echo "Print the OS Version: $RUNNER_OS"
           pwd
-          ls -la
-      - name: Check the tools
-        run: |
-          git --version
-          docker --version
-      - name: check the process
-        run: ps
+          ls
+          echo "The repository is: $GITHUB_REPOSITORY"
